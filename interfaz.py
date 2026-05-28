@@ -10,6 +10,7 @@ import sys
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
+NGROK_PATH = r"C:\Users\aron9\AppData\Local\Microsoft\WindowsApps\ngrok.exe"
 # ======================================================
 # VARIABLES GLOBALES
 # ======================================================
@@ -362,7 +363,7 @@ def ejecutar_bot():
     # =========================================
     # INICIAR NGROK
     # =========================================
-    subprocess.Popen(["ngrok.exe", "http", "8000"],cwd=BASE_DIR)
+    subprocess.Popen([NGROK_PATH, "http", "8000"],cwd=BASE_DIR)
     time.sleep(5)
 
     # =========================================
